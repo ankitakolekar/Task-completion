@@ -1,0 +1,61 @@
+/* a {
+    text-decoration: none;
+}
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.profile{
+    display: grid;
+    justify-content: left;
+   align-items: right;
+    margin: 1px 0;
+    background-color: black;
+}
+h1 {
+    color: white;
+    text-align: right;
+}
+h2 {
+    color: white;
+    text-align: right;
+}
+p {
+    color: white;
+    text-align: right;
+} */
+
+
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+    th, td {
+    border: 2px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    }
+    th {
+    background-color: #f2f2f2;
+    }
+
+    
+    /* two columns side-by-side */
+    .skills {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .professional-skills {
+        flex: 1 1 0;
+        border: 2px solid #ddd;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+ 
