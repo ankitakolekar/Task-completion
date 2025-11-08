@@ -99,7 +99,7 @@
   &lt;/body&gt;
 &lt;/html&gt;</pre>
         </article>
-        <p class="reflection" style="margin-top:.6rem;color:#425066;font-style:italic;">"It was my first step into web design: HTML gives structure, CSS makes it beautiful."</p>
+       
       </div>
 
       <div id="lists-markup" class="day-content" role="tabpanel">
@@ -172,7 +172,7 @@
         <h3>Forms</h3>
         <p>Form elements (input, textarea, select), attributes (required, placeholder), labels, fieldset and accessibility notes.</p>
 
-        <form class="demo" aria-label="Contact example form" onsubmit="event.preventDefault(); alert('Form submitted (demo)');">
+        <form class="demo" aria-label="Contact example form" ">
           <div>
             <label for="demo-name">Name</label>
             <input id="demo-name" type="text" placeholder="Full name" required />
@@ -213,13 +213,7 @@
             <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
-
-          <div style="margin-top:.5rem;">
-            <strong>Embedded Map example (iframe)</strong>
-            <div style="border-radius:8px; overflow:hidden; margin-top:.5rem;">
-              <iframe title="Chicago Theatre map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.123!2d-87.633!3d41.885" style="width:100%;height:300px;border:0;"></iframe>
-            </div>
-          </div>
+         
         </div>
       </div>
 
@@ -233,10 +227,112 @@
         <a href="#tables" class="day-tab">Tables</a>
         <a href="#forms" class="day-tab">Forms</a>
         <a href="#multimedia" class="day-tab">Multimedia</a>
+        
       </div>
     </section>
+    <!-- Button to open/close the GitHub section -->
+    <div style="margin:1rem 0;">
+        <button id="open-github-btn" aria-controls="github" aria-expanded="false" type="button">
+            Open Git & GitHub
+        </button>
+    </div>
 
+    <section id="github" class="card" aria-labelledby="github-heading" style="display:none;" hidden>
+        <h2 id="github-heading">Git & GitHub Best Practices</h2>
 
+        <div style="margin-top:.75rem;">
+            <h3>Key Repositories</h3>
+            <ul>
+                <li><a href="https://github.com/ankitakolekar/Portfolio.git" target="_blank" rel="noopener">portfolio</a></li>
+                <li><a href="https://github.com/ankitakolekar/nakbook.git" target="_blank" rel="noopener">ecommerce</a></li>
+                <li><a href="https://github.com/ankitakolekar/BE-Final-Year-Project.git" target="_blank" rel="noopener">Reel time portal Automation</a></li>
+                <li><a href="https://github.com/ankitakolekar/twitter-clone.git" target="_blank" rel="noopener">twitter-clone</a></li>
+            </ul>
+        </div>
+
+        <div style="margin-top:.75rem;">
+            <h3>Common Git & GitHub Commands</h3>
+            <pre class="example" style="white-space:pre-wrap;"># configure identity
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+    # clone, branch, commit & push
+    git clone https://github.com/your-username/your-repo.git
+    git checkout -b feature/short-description
+    git add .
+    git commit -m "Add feature: short description"
+    git push -u origin feature/short-description
+
+    # create PR with GitHub CLI (optional)
+    gh auth login
+    gh pr create --title "Short title" --body "Description" --base main
+    </pre>
+        </div>
+
+        <div style="margin-top:.75rem;">
+            <h3>Pull Request / Repo Checklist</h3>
+            <ul>
+                <li>Use descriptive branch names (feature/, fix/, docs/)</li>
+                <li>Write a clear PR title and description; include screenshots if UI changes</li>
+                <li>Link related issue numbers (e.g., fixes #123)</li>
+                <li>Run tests & lint before requesting review</li>
+                <li>Add a short changelog or release note when appropriate</li>
+            </ul>
+        </div>
+
+        <div style="margin-top:.75rem;">
+            <h3>CI, Workflows & Pages</h3>
+            <p>
+                - Add a GitHub Actions workflow (.github/workflows/) for tests, linting, and deploy.<br />
+                - Use GitHub Pages for static sites: Settings → Pages → deploy branch (or use actions deploy).<br />
+                - Protect main branch: require PR reviews and passing checks.
+            </p>
+        </div>
+
+        <div style="margin-top:.75rem;">
+            <h3>Helpful Links</h3>
+            <ul>
+                <li><a href="https://docs.github.com/" target="_blank" rel="noopener">GitHub Docs</a></li>
+                <li><a href="https://docs.github.com/en/actions" target="_blank" rel="noopener">GitHub Actions docs</a></li>
+                <li><a href="https://cli.github.com/" target="_blank" rel="noopener">GitHub CLI</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        (function(){
+            const btn = document.getElementById('open-github-btn');
+            const section = document.getElementById('github');
+
+            function setOpen(open){
+                if(open){
+                    section.hidden = false;
+                    section.style.display = '';
+                    btn.setAttribute('aria-expanded', 'true');
+                    btn.textContent = 'Close Git & GitHub';
+                    // smooth scroll and focus heading for accessibility
+                    section.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    const heading = section.querySelector('#github-heading');
+                    if(heading) heading.focus({preventScroll: true});
+                } else {
+                    section.hidden = true;
+                    section.style.display = 'none';
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.textContent = 'Open Git & GitHub';
+                    btn.focus();
+                }
+            }
+
+            // make the heading focusable for the script above
+            const heading = section.querySelector('#github-heading');
+            if(heading) heading.tabIndex = -1;
+
+            btn.addEventListener('click', () => {
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                setOpen(!isOpen);
+            });
+        })();
+    </script>
   </main>
 
   <footer>

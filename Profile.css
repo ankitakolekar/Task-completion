@@ -17,10 +17,12 @@ header {
   padding: 1.25rem 1rem;
   position: sticky;
   top: 0;
-  z-index: 30;
+  /* z-index: 30; */
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-.container { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+.container { max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 1rem; }
 
 .brand {
   display:flex;
@@ -32,12 +34,12 @@ header {
   font-weight:700;
   letter-spacing:.2px;
 }
-nav.primary {
+/* nav.primary {
   margin-top:.5rem;
   display:flex;
   gap:.5rem;
   flex-wrap:wrap;
-}
+} */
 nav.primary a {
   color: rgba(255,255,255,0.95);
   text-decoration:none;
@@ -46,7 +48,11 @@ nav.primary a {
   font-weight:600;
   font-size:.95rem;
 }
-nav.primary a:hover, nav.primary a:focus { background: rgba(255,255,255,0.08); outline: none; }
+nav.primary a:hover, nav.primary a:focus 
+{
+     background:black; 
+     outline: none;
+     }
 
 /* ===== Hero ===== */
 .hero {
