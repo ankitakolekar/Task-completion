@@ -230,14 +230,8 @@
         
       </div>
     </section>
-    <!-- Button to open/close the GitHub section -->
-    <div style="margin:1rem 0;">
-        <button id="open-github-btn" aria-controls="github" aria-expanded="false" type="button">
-            Open Git & GitHub
-        </button>
-    </div>
 
-    <section id="github" class="card" aria-labelledby="github-heading" style="display:none;" hidden>
+    <section id="github" class="card" aria-labelledby="github-heading">
         <h2 id="github-heading">Git & GitHub Best Practices</h2>
 
         <div style="margin-top:.75rem;">
@@ -299,45 +293,10 @@
         </div>
     </section>
 
-    <script>
-        (function(){
-            const btn = document.getElementById('open-github-btn');
-            const section = document.getElementById('github');
-
-            function setOpen(open){
-                if(open){
-                    section.hidden = false;
-                    section.style.display = '';
-                    btn.setAttribute('aria-expanded', 'true');
-                    btn.textContent = 'Close Git & GitHub';
-                    // smooth scroll and focus heading for accessibility
-                    section.scrollIntoView({behavior: 'smooth', block: 'start'});
-                    const heading = section.querySelector('#github-heading');
-                    if(heading) heading.focus({preventScroll: true});
-                } else {
-                    section.hidden = true;
-                    section.style.display = 'none';
-                    btn.setAttribute('aria-expanded', 'false');
-                    btn.textContent = 'Open Git & GitHub';
-                    btn.focus();
-                }
-            }
-
-            // make the heading focusable for the script above
-            const heading = section.querySelector('#github-heading');
-            if(heading) heading.tabIndex = -1;
-
-            btn.addEventListener('click', () => {
-                const isOpen = btn.getAttribute('aria-expanded') === 'true';
-                setOpen(!isOpen);
-            });
-        })();
-    </script>
+  
   </main>
 
-  <footer>
-    &copy; 2025 Ankita Kolekar — Built with HTML & CSS (Days 1–9)
-  </footer>
+
 
 </body>
 </html>
