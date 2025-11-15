@@ -1,302 +1,420 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ankita Kolekar — Final Portfolio (Days 1–9)</title>
-  <meta name="description" content="Portfolio and learning journal of Ankita Kolekar — web development training summary Days 1–9 with examples." />
-  <link rel="stylesheet" href="Profile.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankita Kolekar - Interactive Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="Profile.css">
 </head>
 <body>
-  <header>
-    <div class="container brand" role="banner">
-      <div>
-        <div class="title">Ankita Kolekar</div>
-        <div style="font-size:.9rem; opacity:.95;">Full Stack Developer </div>
-      </div>
-      <nav class="primary" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#training">Assessment</a>
-      
-      </nav>
+  Navigation
+  <nav class="navbar">
+    <div class="nav-brand">Ankita Kolekar</div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </header>
+  </nav>
 
-  <main class="container" id="main">
-    <section class="hero" aria-labelledby="intro-title">
-      <img src="Profile_-removebg-preview.png" alt="Ankita Kolekar — avatar" class="avatar" />
-      <div class="hero-content">
-        <h1 id="intro-title">Hello — I'm Ankita Kolekar</h1>
-        <p>I build responsive web experiences and enjoy learning front-end & back-end development, machine learning and data analytics. This page compiles my course work and example code from Day 1 through Day 9.</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Hi, I'm <span class="highlight">Ankita</span> 
+          <span class="wave">👋</span>
+        </h1>
+        <p class="hero-subtitle">
+          I'm a full-stack developer specializing in React, Next.js. 
+          I build modern, smooth, and performance-driven web experiences.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#" id="downloadResumeHero" class="btn btn-secondary">Download Resume</a>
+        </div>
       </div>
-    </section>
+      <div class="hero-tech-icons">
+        <div class="tech-icon" data-tech="React">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="2" fill="#61DAFB"/><path d="M12 2C8 2 4.5 4.5 4.5 8c0 1.5.5 3 1.5 4" stroke="#61DAFB" stroke-width="2"/></svg>
+        </div>
 
-    <section id="education" class="card" aria-labelledby="education-heading">
-      <h2 id="education-heading">Education</h2>
-      <div class="table-wrapper" role="region" aria-label="Education table">
-        <table>
-          <thead>
-            <tr><th>Degree</th><th>Institution</th><th>Years</th><th>Grade</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Bachelor's of Engineering (IT)</td><td>Sinhgad Institute of Technology, Lonavala</td><td>2022–2025</td><td>8.13 CGPA</td></tr>
-            <tr><td>Diploma in Information Technology</td><td>Government Residence Women Polytechnic, Tasgaon</td><td>2019–2022</td><td>84.93%</td></tr>
-            <tr><td>Secondary School Certificate</td><td>Mane Deshmukh Vidyalaya, Patan</td><td>2018–2019</td><td>83.80%</td></tr>
-          </tbody>
-        </table>
+        <div class="tech-icon" data-tech="JavaScript">
+          <svg viewBox="0 0 24 24" fill="#F7DF1E"><rect width="24" height="24" rx="4"/><text x="50%" y="70%" text-anchor="middle" fill="#000" font-size="14" font-weight="bold">JS</text></svg>
+        </div>
       </div>
-    </section>
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+    </div>
+  </section>
 
-    <section id="skills" class="card" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Technical & Professional Skills</h2>
-      <ul class="skills" aria-label="List of skills">
-        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li><li>Java</li>
-        <li>SQL</li><li>Machine Learning</li><li>Data Analytics</li><li>Communication</li>
-        <li>Teamwork</li><li>Leadership</li>
-      </ul>
-    </section>
-
-    <section id="projects" class="card" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects & Internships</h2>
-      <ol>
-        <li>e-commerce website</li>
-        <li>Twitter clone</li>
-        <li>Blood bank management system</li>
-        <li>Real-time Job portal Automation</li>
-      </ol>
-      <h3 style="margin-top:.75rem">Internships</h3>
-      <p>Nullclass — Web Development Intern (June 2023 - Aug 2023)<br> Nakshatra Neotech — Frontend Intern (Jan 2025 - May 2025)</p>
-    </section>
-
-    <section id="certifications" class="card" aria-labelledby="certifications-heading">
-      <h2 id="certifications-heading">Certifications</h2>
-      <ul>
-        <li>Microsoft Certified: Fabric Analytics Engineer Associate</li>
-        <li>Google IT Automation with Python Specialization</li>
-        <li>AWS Cloud Practitioner Essentials</li>
-      </ul>
-    </section>
-
-    <section id="training" class="card" aria-labelledby="training-heading">
-      <h2 id="training-heading">Thinkbridge Assessment Program — Days 1 through 4</h2>
-
-      <div id="html-basics" class="day-content" role="tabpanel" aria-labelledby="">
-        <h3>Building My First Web Page (HTML basics)</h3>
-        <p>On Day 1 we learned basic HTML structure (doctype, html, head, body), headings, paragraphs and linking CSS.</p>
-        <article>
-          <h4>Example</h4>
-          <pre class="example">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;My First Web Page&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello World!&lt;/h1&gt;
-    &lt;p&gt;This is my first webpage using HTML and CSS.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-        </article>
-       
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container-about">
+      <!-- Left Column - Profile Card -->
+      <div class="about-left-column">
+        <div class="about-card-modern">
+          <img src="Profile_-removebg-preview.jpeg" alt="Ankita Kolekar" class="about-img-modern">
+          <div class="about-info-modern">
+            <h2 class="about-name-modern">Ankita Kolekar</h2>
+            <p class="about-role-modern">Full-Stack Developer | MERN </p>
+            <div class="contact-details-modern">
+              <div class="contact-item-modern">
+                <i class="fas fa-phone contact-icon-modern"></i>
+                <span>+91 8805025921</span>
+              </div>
+              <div class="contact-item-modern">
+                <i class="fas fa-envelope contact-icon-modern"></i>
+                <span>ankitakolekar@gmail.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-buttons-modern">
+            <a href="#" id="downloadResumeBtn" class="btn-modern btn-download">
+              <i class="fas fa-download"></i>
+              Download Resume
+            </a>
+            <a href="#projects" class="btn-modern btn-projects">View Projects</a>
+          </div>
+          <div class="social-connect-modern">
+            <p class="connect-text">Let's connect 👋</p>
+            <div class="social-icons-modern">
+              <a href="https://www.linkedin.com/in/ankitakolekar27/" target="_blank" class="social-icon-modern linkedin">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/ankitakolekar" target="_blank" class="social-icon-modern github">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div id="lists-markup" class="day-content" role="tabpanel">
-        <h3>Lists & Semantic Markup</h3>
-        <p>We explored ordered lists, unordered lists and nested lists — used for navigation, steps, and outlines.</p>
-        <div style="margin-top:.5rem;">
-          <strong>Examples:</strong>
-          <ul style="margin-top:.5rem;">
-            <li>Unordered list: &lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;...&lt;/ul&gt;</li>
-            <li>Ordered list: &lt;ol&gt;&lt;li&gt;Step 1&lt;/li&gt;...&lt;/ol&gt;</li>
-            <li>Nested lists: place a &lt;ul&gt; or &lt;ol&gt; inside an &lt;li&gt; for sub-items.</li>
+      <!-- Right Column - Details -->
+      <div class="about-right-column">
+        <div class="detail-section">
+          <h3>About</h3>
+          <p>Hi, I'm <strong>Ankita Kolekar</strong> — a full-stack developer passionate about crafting modern, smooth, and high-performance applications. With expertise in <strong>React, Next.js,and Node.js</strong>, I love blending creative design with clean code. Outside coding, I enjoy exploring new technologies, solving challenges, and building things that make life easier.Motivated and detail-oriented individual
+ passionate about building efficient, user
+centric applications and solving complex
+ problems. Adaptable and committed to
+ continuous learning, with a strong drive to
+ contribute to innovative, collaborative projects
+ in the dynamic tech industry.</p>
+        </div>
+
+        <div class="detail-section">
+          <h3>Education</h3>
+          <div class="education-item">
+            <h4>B.E. (Information Technology)</h4>
+            <p>Sinhgad Institute of Technology, Lonavala</p>
+            <p class="edu-year">2022-2025 — CGPA: 8.13</p>
+          </div>
+          <div class="education-item">
+            <h4>Diploma in Information Technology</h4>
+            <p>Government Residence Women Polytechnic, Tasgaon</p>
+            <p class="edu-year">2019-2022 — 84.93%</p>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h3>Certifications</h3>
+          <ul class="cert-list">
+            <li>Microsoft Certified: Fabric Analytics Engineer Associate</li>
+            <li>Google IT Automation with Python Specialization</li>
+            <li>AWS Cloud Practitioner Essentials</li>
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div id="images-links" class="day-content" role="tabpanel">
-        <h3>Images, Links & Accessibility</h3>
-        <p>Added images with <code>&lt;img&gt;</code>, using <code>src</code> and descriptive <code>alt</code> text. Used anchor links and fragment identifiers.</p>
-        <div style="margin-top:.6rem;">
-          <strong>Image example:</strong>
-          <pre class="example">&lt;img src="assets/images/home/speakers.jpg" alt="Professional Speaker"&gt;</pre>
-          <p style="margin-top:.5rem;">Always include meaningful <code>alt</code> text for accessibility and SEO.</p>
-        </div>
-      </div>
-
-      <div id="box-model" class="day-content" role="tabpanel">
-        <h3>CSS Box Model & Positioning</h3>
-        <p>Covered margin, padding, border, width/height, and display types (inline, block, inline-block). Positioning and floats for layout.</p>
-        <pre class="example">/* example: make image block, rounded corners */
-.teaser img {
-  display:block;
-  max-width:100%;
-  border-radius:5px;
-  margin-bottom:22px;
-}</pre>
-      </div>
-
-      <div id="flexbox" class="day-content" role="tabpanel">
-        <h3>Responsive Layout & Flexbox</h3>
-        <p>Intro to flexible layouts using Flexbox and media queries for responsive design.</p>
-        <pre class="example">.row { display:flex; gap:1rem; flex-wrap:wrap; }
-.col-1-3 { flex:0 0 33.333%; }
-@media (max-width:720px){ .col-1-3 { flex: 0 0 100%; } }</pre>
-      </div>
-
-      <div id="backgrounds" class="day-content" role="tabpanel">
-        <h3>Backgrounds & Gradients</h3>
-        <p>Background color, images, gradients, multiple backgrounds and sizing covered.</p>
-        <pre class="example">/* linear-gradient example */
-.section { background: linear-gradient(to right,#4facfe,#00f2fe); }</pre>
-      </div>
-
-      <div id="tables" class="day-content" role="tabpanel">
-        <h3>Tables</h3>
-        <p>Semantic tables using <code>&lt;table&gt;&lt;thead&gt;&lt;tbody&gt;&lt;tfoot&gt;</code>, header scopes, colspan/rowspan and styling for legibility.</p>
-        <div class="table-wrapper" style="margin-top:.6rem;">
-          <table aria-label="Bookstore inventory">
-            <thead><tr><th scope="col">Item</th><th scope="col">Availability</th><th scope="col">Qty</th><th scope="col">Price</th></tr></thead>
-            <tbody>
-              <tr><td>Don't Make Me Think</td><td>In Stock</td><td>1</td><td>$30.02</td></tr>
-              <tr><td>A Project Guide to UX Design</td><td>In Stock</td><td>2</td><td>$52.94</td></tr>
-              <tr><td>Introducing HTML5</td><td>Out of Stock</td><td>1</td><td>$22.23</td></tr>
-            </tbody>
-            <tfoot><tr><td colspan="3">Total</td><td>$105.19</td></tr></tfoot>
-          </table>
-        </div>
-      </div>
-
-      <div id="forms" class="day-content" role="tabpanel">
-        <h3>Forms</h3>
-        <p>Form elements (input, textarea, select), attributes (required, placeholder), labels, fieldset and accessibility notes.</p>
-
-        <form class="demo" aria-label="Contact example form" ">
-          <div>
-            <label for="demo-name">Name</label>
-            <input id="demo-name" type="text" placeholder="Full name" required />
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250" alt="E-commerce Project">
           </div>
-          <div>
-            <label for="demo-email">Email</label>
-            <input id="demo-email" type="email" placeholder="name@domain.com" required />
+          <div class="project-content">
+            <h3>E-commerce Website</h3>
+            <p>A full-featured online shopping platform with cart, payment gateway, and admin dashboard.</p>
+            <div class="project-tech">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Node.js</span>
+              <span class="tech-badge">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ankitakolekar/nakbook.git" class="project-btn github-btn">GitHub</a>
+            </div>
           </div>
-          <div>
-            <label for="demo-topic">Topic</label>
-            <select id="demo-topic">
-              <option>General Inquiry</option>
-              <option>Feedback</option>
-              <option>Support</option>
-            </select>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250" alt="Twitter Clone">
           </div>
-          <div>
-            <label for="demo-message">Message</label>
-            <textarea id="demo-message" rows="4" placeholder="Write your message..."></textarea>
+          <div class="project-content">
+            <h3>Twitter Clone</h3>
+            <p>Real-time social media app with tweets, likes, follows, and responsive UI.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">Firebase</span>
+              <span class="tech-badge">Tailwind</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ankitakolekar/Twitter-Clone.git" class="project-btn github-btn">GitHub</a>
+            </div>
           </div>
-          <div>
-            <button type="submit">Submit</button>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250" alt="Job Portal">
           </div>
-        </form>
+          <div class="project-content">
+            <h3>Real-time Job Portal Automation</h3>
+            <p>Web app that automates job applications across portals like Internshala and Naukri.</p>
+            <div class="project-tech">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Express</span>
+              <span class="tech-badge">Puppeteer</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ankitakolekar/BE-Final-Year-Project.git" class="project-btn github-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250" alt="Blood Bank">
+          </div>
+          <div class="project-content">
+            <h3>Blood Bank Management System</h3>
+            <p>Platform for managing blood donations, inventory, and donor information efficiently.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/ankitakolekar/Blood-Bank-Management-System.git" class="project-btn github-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div id="multimedia" class="day-content" role="tabpanel">
-        <h3>Multimedia (Images, Audio, Video, Iframes)</h3>
-        <p>HTML5 media elements: <code>&lt;img&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;video&gt;</code> and embedding maps/videos via <code>&lt;iframe&gt;</code>.</p>
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+              <p>Python</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-solid fa-c"></i></div>
+              <p>C/C++</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+              <p>Java</p>
+            </div>
+          </div>
+        </div>
 
-        <div class="media-container" style="margin-top:.6rem;">
-          <img class="responsive" src="https://via.placeholder.com/900x400.png?text=Sample+Image" alt="Sample image demonstration" />
-          <video controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-            Your browser does not support the video element.
-          </video>
-          <audio controls>
-            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
-         
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-icon html"><i class="fa-brands fa-html5"></i></div>
+              <p>HTML</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon css"><i class="fa-brands fa-css3-alt"></i></div>
+              <p>CSS</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon js"><i class="fa-brands fa-js"></i></div>
+              <p>JavaScript</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon react"><i class="fa-brands fa-react"></i></div>
+              <p>ReactJS</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-react"></i></div>
+              <p>React Native</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon tailwind"><i class="fa-solid fa-wind"></i></div>
+              <p>Tailwind CSS</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-bootstrap"></i></div>
+              <p>Bootstrap</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-icon node"><i class="fa-brands fa-node-js"></i></div>
+              <p>Node.js</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-solid fa-fire"></i></div>
+              <p>Firebase</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Databases</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+              <p>MySQL</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-solid fa-leaf"></i></div>
+              <p>MongoDB</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-solid fa-fire"></i></div>
+              <p>Firestore</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Tools & Version Control</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-icon git"><i class="fa-brands fa-git-alt"></i></div>
+              <p>Git</p>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+              <p>GitHub</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Cloud</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fa-brands fa-aws"></i></div>
+              <p>AWS</p>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="day-nav" role="tablist" aria-label="Training day tabs">
-        <a href="#html-basics" class="day-tab">HTML Basics</a>
-        <a href="#lists-markup" class="day-tab">Lists & Markup</a>
-        <a href="#images-links" class="day-tab">Images & Links</a>
-        <a href="#box-model" class="day-tab">Box Model</a>
-        <a href="#flexbox" class="day-tab">Flexbox</a>
-        <a href="#backgrounds" class="day-tab">Backgrounds</a>
-        <a href="#tables" class="day-tab">Tables</a>
-        <a href="#forms" class="day-tab">Forms</a>
-        <a href="#multimedia" class="day-tab">Multimedia</a>
-        
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-subtitle">I'd love to connect! Whether you want to discuss opportunities, collaborate on a project, or just say hi — feel free to reach out.</p>
+      
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-text">
+              <h4>Email</h4>
+              <p>ankitakolekar@gmail.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📱</div>
+            <div class="info-text">
+              <h4>Phone</h4>
+              <p>+91 8530684793</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <h4>Location</h4>
+              <p>Maharashtra, India</p>
+            </div>
+          </div>
+          <div class="social-connect">
+            <h4>Let's connect 👋</h4>
+            <div class="social-buttons">
+              <a href="https://www.linkedin.com/in/ankitakolekar27/" class="social-link linkedin">LinkedIn</a>
+              <!-- <a href="https://github.com/ankitakolekar" class="social-link github">GitHub</a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+          <div id="formSuccess" class="form-message success" style="display:none;">
+            ✅ Message sent successfully!
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="github" class="card" aria-labelledby="github-heading">
-        <h2 id="github-heading">Git & GitHub Best Practices</h2>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ankita Kolekar — Built with HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
 
-        <div style="margin-top:.75rem;">
-            <h3>Key Repositories</h3>
-            <ul>
-                <li><a href="https://github.com/ankitakolekar/Portfolio.git" target="_blank" rel="noopener">portfolio</a></li>
-                <li><a href="https://github.com/ankitakolekar/nakbook.git" target="_blank" rel="noopener">ecommerce</a></li>
-                <li><a href="https://github.com/ankitakolekar/BE-Final-Year-Project.git" target="_blank" rel="noopener">Reel time portal Automation</a></li>
-                <li><a href="https://github.com/ankitakolekar/twitter-clone.git" target="_blank" rel="noopener">twitter-clone</a></li>
-            </ul>
-        </div>
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-        <div style="margin-top:.75rem;">
-            <h3>Common Git & GitHub Commands</h3>
-            <pre class="example" style="white-space:pre-wrap;"># configure identity
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
-
-    # clone, branch, commit & push
-    git clone https://github.com/your-username/your-repo.git
-    git checkout -b feature/short-description
-    git add .
-    git commit -m "Add feature: short description"
-    git push -u origin feature/short-description
-
-    # create PR with GitHub CLI (optional)
-    gh auth login
-    gh pr create --title "Short title" --body "Description" --base main
-    </pre>
-        </div>
-
-        <div style="margin-top:.75rem;">
-            <h3>Pull Request / Repo Checklist</h3>
-            <ul>
-                <li>Use descriptive branch names (feature/, fix/, docs/)</li>
-                <li>Write a clear PR title and description; include screenshots if UI changes</li>
-                <li>Link related issue numbers (e.g., fixes #123)</li>
-                <li>Run tests & lint before requesting review</li>
-                <li>Add a short changelog or release note when appropriate</li>
-            </ul>
-        </div>
-
-        <div style="margin-top:.75rem;">
-            <h3>CI, Workflows & Pages</h3>
-            <p>
-                - Add a GitHub Actions workflow (.github/workflows/) for tests, linting, and deploy.<br />
-                - Use GitHub Pages for static sites: Settings → Pages → deploy branch (or use actions deploy).<br />
-                - Protect main branch: require PR reviews and passing checks.
-            </p>
-        </div>
-
-        <div style="margin-top:.75rem;">
-            <h3>Helpful Links</h3>
-            <ul>
-                <li><a href="https://docs.github.com/" target="_blank" rel="noopener">GitHub Docs</a></li>
-                <li><a href="https://docs.github.com/en/actions" target="_blank" rel="noopener">GitHub Actions docs</a></li>
-                <li><a href="https://cli.github.com/" target="_blank" rel="noopener">GitHub CLI</a></li>
-            </ul>
-        </div>
-    </section>
-
-  
-  </main>
-
-
+  <script src="interactive-script.js"></script>
 
 </body>
-</html>
+</html> 
